@@ -1,0 +1,1652 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+
+
+/* =========================
+   RESET
+========================= */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+body {
+
+    font-family: 'Noto Sans KR', sans-serif;
+
+    background: #faf7f0;
+
+    color: #3e4638;
+
+    line-height: 1.8;
+
+}
+
+
+
+img {
+
+    width: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+}
+
+
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+
+
+
+/* =========================
+   HEADER
+========================= */
+
+
+.header {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 70px;
+
+    padding: 0 6%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background: rgba(250,247,240,0.85);
+
+    backdrop-filter: blur(10px);
+
+    z-index: 1000;
+
+}
+
+
+
+.logo {
+
+    font-family: 'Noto Serif KR', serif;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    color: #4c6345;
+
+}
+
+
+
+.logo span {
+
+    margin-right: 5px;
+
+}
+
+
+
+.header nav {
+
+    display: flex;
+
+    gap: 25px;
+
+}
+
+
+
+.header nav a {
+
+    font-size: 13px;
+
+    color: #59614f;
+
+    transition: 0.3s;
+
+}
+
+
+
+.header nav a:hover {
+
+    color: #9b6758;
+
+}
+
+
+
+
+
+/* =========================
+   HERO
+========================= */
+
+
+.hero {
+
+    height: 100vh;
+
+    min-height: 650px;
+
+    background-image: url("images/shop.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+}
+
+
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+    linear-gradient(
+    rgba(35,45,30,0.35),
+    rgba(35,45,30,0.45)
+    );
+
+}
+
+
+
+.hero-content {
+
+    position: relative;
+
+    color: white;
+
+    z-index: 1;
+
+}
+
+
+
+.small-title {
+
+    letter-spacing: 5px;
+
+    font-size: 13px;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.hero h1 {
+
+    font-family: 'Noto Serif KR', serif;
+
+    font-size: 70px;
+
+    margin-bottom: 25px;
+
+}
+
+
+
+.quote {
+
+    font-size: 17px;
+
+    opacity: 0.95;
+
+    margin-bottom: 40px;
+
+}
+
+
+
+.button {
+
+    display: inline-block;
+
+    padding: 12px 40px;
+
+    border-radius: 40px;
+
+    background: rgba(255,255,255,0.9);
+
+    color: #53644b;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+
+}
+
+
+
+.button:hover {
+
+    transform: translateY(-5px);
+
+}
+
+
+
+
+
+/* =========================
+   SECTION COMMON
+========================= */
+
+
+.section {
+
+    padding: 120px 8%;
+
+}
+
+
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 60px;
+
+}
+
+
+
+.section-title span {
+
+    color: #9b6758;
+
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+}
+
+
+
+.section-title h2 {
+
+    font-family: 'Noto Serif KR', serif;
+
+    font-size: 38px;
+
+    color: #46563d;
+
+}
+ 
+/* =========================
+   PROFILE
+========================= */
+
+.profile-container {
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+}
+
+
+
+.profile-image {
+
+    height: 520px;
+
+    overflow: hidden;
+
+    border-radius: 180px 180px 20px 20px;
+
+    box-shadow: 0 20px 45px rgba(60,70,50,0.12);
+
+}
+
+
+
+.profile-image img {
+
+    height: 100%;
+
+    transition: transform 0.7s ease;
+
+}
+
+
+
+.profile-image:hover img {
+
+    transform: scale(1.04);
+
+}
+
+
+
+.profile-card {
+
+    background: #fffdf8;
+
+    padding: 40px 45px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 15px 40px rgba(70,80,60,0.08);
+
+}
+
+
+
+.info-item {
+
+    display: grid;
+
+    grid-template-columns: 130px 1fr;
+
+    padding: 20px 0;
+
+    border-bottom: 1px solid #e8e2d6;
+
+}
+
+
+
+.info-item:last-child {
+
+    border-bottom: none;
+
+}
+
+
+
+.info-item span {
+
+    color: #9b6758;
+
+    font-size: 13px;
+
+}
+
+
+
+.info-item p {
+
+    color: #424a3d;
+
+    font-weight: 500;
+
+}
+
+
+
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+
+    background: #f1f3e9;
+
+}
+
+
+
+.about-box {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    background: #fffdf8;
+
+    padding: 55px;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow: 0 15px 40px rgba(60,70,50,0.06);
+
+}
+
+
+
+.about-box > p {
+
+    font-family: 'Noto Serif KR', serif;
+
+    font-size: 19px;
+
+    color: #53604c;
+
+}
+
+
+
+.keyword-list {
+
+    margin-top: 40px;
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+}
+
+
+
+.keyword-list div {
+
+    padding: 8px 18px;
+
+    background: #edf0e4;
+
+    border-radius: 30px;
+
+    font-size: 13px;
+
+}
+
+
+
+
+
+/* =========================
+   LIKE / DISLIKE
+========================= */
+
+.preference-container {
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+
+}
+
+
+
+.preference-card {
+
+    padding: 45px;
+
+    border-radius: 25px;
+
+    background: #fffdf8;
+
+    box-shadow: 0 15px 35px rgba(70,80,60,0.07);
+
+}
+
+
+
+.preference-card h3 {
+
+    font-family: 'Noto Serif KR', serif;
+
+    margin-bottom: 25px;
+
+    font-size: 22px;
+
+}
+
+
+
+.preference-card h3 i {
+
+    margin-right: 10px;
+
+}
+
+
+
+.preference-card ul {
+
+    list-style: none;
+
+}
+
+
+
+.preference-card li {
+
+    padding: 9px 0;
+
+    color: #5d6557;
+
+    border-bottom: 1px dashed #ddd7cb;
+
+}
+
+
+
+.preference-card li:last-child {
+
+    border-bottom: none;
+
+}
+
+
+
+.preference-card.like h3 {
+
+    color: #687b58;
+
+}
+
+
+
+.preference-card.dislike h3 {
+
+    color: #9b6758;
+
+}
+
+
+
+
+
+/* =========================
+   FLOWER LANGUAGE
+========================= */
+
+.flower-language {
+
+    background: #f6f0e8;
+
+}
+
+
+
+.flower-box {
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    background: #fffdf8;
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    box-shadow: 0 20px 45px rgba(80,70,55,0.08);
+
+}
+
+
+
+.flower-image {
+
+    min-height: 480px;
+
+}
+
+
+
+.flower-image img {
+
+    height: 100%;
+
+}
+
+
+
+.flower-text {
+
+    padding: 60px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+
+
+.flower-text h3 {
+
+    font-family: 'Noto Serif KR', serif;
+
+    font-size: 38px;
+
+    color: #526449;
+
+    margin-bottom: 15px;
+
+}
+
+
+
+.flower-text .meaning {
+
+    color: #a06b5c;
+
+    font-size: 14px;
+
+    margin-bottom: 30px;
+
+}
+
+
+
+.flower-text > p:last-child {
+
+    color: #666d61;
+
+}
+
+
+
+
+
+/* =========================
+   CHARACTER DETAILS
+========================= */
+
+.detail-grid {
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+}
+
+
+
+.detail-card {
+
+    background: #fffdf8;
+
+    padding: 30px;
+
+    min-height: 140px;
+
+    border-radius: 18px;
+
+    border: 1px solid #ebe5da;
+
+    transition: 0.3s;
+
+}
+
+
+
+.detail-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 15px 30px rgba(70,80,60,0.08);
+
+}
+
+
+
+.detail-card span {
+
+    display: block;
+
+    color: #9b6758;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 10px;
+
+}
+
+
+
+.detail-card p {
+
+    color: #4f574b;
+
+    font-weight: 500;
+
+}
+ 
+/* =========================
+   FLOWER SHOP
+========================= */
+
+.shop {
+
+    background: #eef1e7;
+
+}
+
+
+
+.shop-container {
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1.2fr 0.8fr;
+
+    gap: 60px;
+
+    align-items: center;
+
+}
+
+
+
+.shop-image {
+
+    height: 500px;
+
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    box-shadow: 0 20px 45px rgba(60,70,50,0.12);
+
+}
+
+
+
+.shop-image img {
+
+    height: 100%;
+
+    transition: transform 0.7s ease;
+
+}
+
+
+
+.shop-image:hover img {
+
+    transform: scale(1.04);
+
+}
+
+
+
+.shop-text h3 {
+
+    font-family: 'Noto Serif KR', serif;
+
+    font-size: 34px;
+
+    color: #4f6247;
+
+    margin-bottom: 25px;
+
+}
+
+
+
+.shop-text > p {
+
+    color: #5d6558;
+
+    margin-bottom: 35px;
+
+}
+
+
+
+.shop-info {
+
+    border-top: 1px solid #d8ddcf;
+
+    padding-top: 20px;
+
+}
+
+
+
+.shop-info p {
+
+    margin: 10px 0;
+
+    color: #5a6255;
+
+}
+
+
+
+.shop-info i {
+
+    width: 25px;
+
+    color: #9b6758;
+
+}
+
+
+
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery-grid {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+
+}
+
+
+
+.gallery-item {
+
+    height: 300px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    cursor: pointer;
+
+}
+
+
+
+.gallery-item img {
+
+    height: 100%;
+
+    transition: transform 0.6s ease;
+
+}
+
+
+
+.gallery-item:hover img {
+
+    transform: scale(1.08);
+
+}
+
+
+
+
+
+/* =========================
+   NOTE / DIARY
+========================= */
+
+.note {
+
+    background: #f4eee5;
+
+}
+
+
+
+.note-box {
+
+    max-width: 800px;
+
+    margin: auto;
+
+    padding: 65px;
+
+    background: #fffdf8;
+
+    border-radius: 10px;
+
+    box-shadow: 0 15px 40px rgba(80,70,55,0.08);
+
+    position: relative;
+
+}
+
+
+
+.note-box::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 20px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 45px;
+
+    height: 8px;
+
+    border-radius: 20px;
+
+    background: #d8b6a9;
+
+}
+
+
+
+.note-title {
+
+    text-align: center;
+
+    margin-bottom: 40px;
+
+}
+
+
+
+.note-title span {
+
+    color: #9b6758;
+
+    letter-spacing: 3px;
+
+    font-size: 12px;
+
+}
+
+
+
+.note-title h2 {
+
+    font-family: 'Noto Serif KR', serif;
+
+    font-size: 30px;
+
+    color: #526449;
+
+}
+
+
+
+.note-content {
+
+    max-width: 550px;
+
+    margin: auto;
+
+    color: #62685e;
+
+}
+
+
+
+.note-content .date {
+
+    color: #9b6758;
+
+    font-size: 13px;
+
+    margin-bottom: 25px;
+
+}
+
+
+
+.signature {
+
+    text-align: right;
+
+    margin-top: 35px;
+
+    font-family: 'Noto Serif KR', serif;
+
+}
+
+
+
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+
+    padding: 70px 20px 35px;
+
+    background: #3f4d3b;
+
+    color: #e9ede2;
+
+    text-align: center;
+
+}
+
+
+
+.footer-logo {
+
+    font-family: 'Noto Serif KR', serif;
+
+    font-size: 22px;
+
+    margin-bottom: 15px;
+
+}
+
+
+
+.footer p {
+
+    font-size: 13px;
+
+    line-height: 2;
+
+}
+
+
+
+.footer-icons {
+
+    margin: 25px 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+}
+
+
+
+.footer-icons a {
+
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    border-radius: 50%;
+
+    transition: 0.3s;
+
+}
+
+
+
+.footer-icons a:hover {
+
+    background: rgba(255,255,255,0.12);
+
+    transform: translateY(-3px);
+
+}
+
+
+
+.copyright {
+
+    opacity: 0.55;
+
+    margin-top: 25px;
+
+}
+
+
+
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+
+    .header {
+
+        padding: 0 5%;
+
+    }
+
+
+
+    .header nav {
+
+        gap: 12px;
+
+    }
+
+
+
+    .header nav a {
+
+        font-size: 10px;
+
+    }
+
+
+
+    .hero h1 {
+
+        font-size: 55px;
+
+    }
+
+
+
+    .section {
+
+        padding: 90px 6%;
+
+    }
+
+
+
+    .profile-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+    }
+
+
+
+    .profile-image {
+
+        height: 450px;
+
+    }
+
+
+
+    .profile-card {
+
+        padding: 30px;
+
+    }
+
+
+
+    .flower-box {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+
+    .flower-image {
+
+        height: 380px;
+
+        min-height: auto;
+
+    }
+
+
+
+    .shop-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+    }
+
+
+
+    .shop-image {
+
+        height: 400px;
+
+    }
+
+
+
+    .gallery-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+
+    .detail-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+
+    .header {
+
+        height: 60px;
+
+    }
+
+
+
+    .logo {
+
+        font-size: 15px;
+
+    }
+
+
+
+    .header nav {
+
+        display: none;
+
+    }
+
+
+
+    .hero {
+
+        min-height: 600px;
+
+    }
+
+
+
+    .hero h1 {
+
+        font-size: 48px;
+
+    }
+
+
+
+    .small-title {
+
+        font-size: 10px;
+
+        letter-spacing: 3px;
+
+    }
+
+
+
+    .quote {
+
+        font-size: 14px;
+
+    }
+
+
+
+    .section {
+
+        padding: 75px 5%;
+
+    }
+
+
+
+    .section-title {
+
+        margin-bottom: 40px;
+
+    }
+
+
+
+    .section-title h2 {
+
+        font-size: 30px;
+
+    }
+
+
+
+    .profile-image {
+
+        height: 380px;
+
+        border-radius: 150px 150px 18px 18px;
+
+    }
+
+
+
+    .info-item {
+
+        grid-template-columns: 100px 1fr;
+
+        font-size: 13px;
+
+    }
+
+
+
+    .about-box {
+
+        padding: 35px 25px;
+
+    }
+
+
+
+    .about-box > p {
+
+        font-size: 16px;
+
+    }
+
+
+
+    .preference-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+
+    .preference-card {
+
+        padding: 30px;
+
+    }
+
+
+
+    .flower-text {
+
+        padding: 35px;
+
+    }
+
+
+
+    .flower-text h3 {
+
+        font-size: 30px;
+
+    }
+
+
+
+    .detail-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+
+    .shop-image {
+
+        height: 330px;
+
+    }
+
+
+
+    .shop-text h3 {
+
+        font-size: 28px;
+
+    }
+
+
+
+    .gallery-grid {
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 10px;
+
+    }
+
+
+
+    .gallery-item {
+
+        height: 200px;
+
+    }
+
+
+
+    .note-box {
+
+        padding: 50px 25px;
+
+    }
+
+
+
+}
+ 
+/* =========================
+   LIGHTBOX
+========================= */
+
+.image-lightbox {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(25, 32, 23, 0.88);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+
+    z-index: 9999;
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+
+}
+
+
+
+.image-lightbox.active {
+
+    opacity: 1;
+
+}
+
+
+
+.image-lightbox img {
+
+    max-width: 90%;
+
+    max-height: 85vh;
+
+    width: auto;
+
+    border-radius: 10px;
+
+    object-fit: contain;
+
+}
+
+
+
+.lightbox-close {
+
+    position: absolute;
+
+    top: 25px;
+
+    right: 30px;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 42px;
+
+    cursor: pointer;
+
+}
+
+
+
+/* =========================
+   TOP BUTTON
+========================= */
+
+.top-button {
+
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    width: 45px;
+
+    height: 45px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #526449;
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    z-index: 999;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(10px);
+
+    transition: 0.3s;
+
+}
+
+
+
+.top-button.show {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+
+}
+
+
+
+.top-button:hover {
+
+    transform: translateY(-3px);
+
+}
